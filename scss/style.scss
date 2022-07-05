@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import 'variables';
+@import 'mixins';
+@import 'keyframes';
+@import 'header';
+@import 'hero';
+@import 'hotels';
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $bg-color;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.box-animation {
+    width: 35%;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    // As formatações em diante são apenas para que o box fique animado assim que a página carregar:
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: box 1s ease-in-out 1s forwards;
+}

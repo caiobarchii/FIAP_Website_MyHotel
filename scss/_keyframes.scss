@@ -1,0 +1,44 @@
+@keyframes arrow {
+    from {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes box {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes hero-image {
+    from {
+        clip-path: inset(40% 0);
+    }
+
+    to {
+        clip-path: inset(0);
+    }
+}
+
+@keyframes moving {
+    from {
+        transform: translate(-20%);
+        opacity: 0;        
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes hotels {
+    from {
+        transform: translate(-40%);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}

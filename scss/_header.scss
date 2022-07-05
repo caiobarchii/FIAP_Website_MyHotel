@@ -1,0 +1,14 @@
+header {
+    width: 90%;
+    height: 20vh;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        color: $dark-color;
+        animation: moving 1.5s ease;
+    }
+}

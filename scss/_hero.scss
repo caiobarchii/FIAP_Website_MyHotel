@@ -1,0 +1,57 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+
+    .hero-content {
+        align-self: center;
+        width: 100%;
+        animation: moving 1.5s ease;
+
+        h2 {
+            font-size: 3rem;
+            color: $dark-color;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $dark-color;
+            margin: 1rem 0 2rem;
+            line-height: 150%;
+        }
+
+        a {
+            background-color: $primary-color;
+            border-radius: $bd-radius;
+            color: $dark-color;
+            font-weight: 900;
+            padding: .8rem 2rem;
+            transition: .5s;
+            @include btn-hover;
+
+            .arrow {
+                margin-left: 7px;
+                font-size: 1.2rem;
+                animation: arrow .9s infinite;
+            }
+        }
+
+    }
+
+    .hero-image {
+        width: 90%;
+        height: 100%;
+        padding: .5rem;
+        // box-shadow: 2px 2px 30px rgba(0,0,0,.35);
+        animation: hero-image 1.2s ease-in forwards;
+        transition: .5s;
+        @include img_scale;
+
+        img {
+            height: 100%;
+            border-radius: $bd-radius;
+        }
+    }
+
+}

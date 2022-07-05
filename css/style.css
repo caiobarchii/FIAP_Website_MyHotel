@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(5px);
+  }
+}
+@keyframes box {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes hero-image {
+  from {
+    clip-path: inset(40% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes moving {
+  from {
+    transform: translate(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes hotels {
+  from {
+    transform: translate(-40%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+header {
+  width: 90%;
+  height: 20vh;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #02144d;
+  animation: moving 1.5s ease;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  margin: auto;
+}
+.hero .hero-content {
+  align-self: center;
+  width: 100%;
+  animation: moving 1.5s ease;
+}
+.hero .hero-content h2 {
+  font-size: 3rem;
+  color: #02144d;
+}
+.hero .hero-content p {
+  font-size: 1.2rem;
+  color: #02144d;
+  margin: 1rem 0 2rem;
+  line-height: 150%;
+}
+.hero .hero-content a {
+  background-color: #83b1ee;
+  border-radius: 5px;
+  color: #02144d;
+  font-weight: 900;
+  padding: 0.8rem 2rem;
+  transition: 0.5s;
+}
+.hero .hero-content a:hover {
+  background-color: #02144d;
+  color: #fff;
+  box-shadow: 2px 3px 10px rgba(9, 8, 8, 0.2);
+}
+.hero .hero-content a .arrow {
+  margin-left: 7px;
+  font-size: 1.2rem;
+  animation: arrow 0.9s infinite;
+}
+.hero .hero-image {
+  width: 90%;
+  height: 100%;
+  padding: 0.5rem;
+  animation: hero-image 1.2s ease-in forwards;
+  transition: 0.5s;
+}
+.hero .hero-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.hero .hero-image img {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.hotels {
+  width: 90%;
+  margin: 10rem auto 5rem;
+  display: grid;
+  row-gap: 5rem;
+}
+.hotels section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  border-radius: 5px;
+}
+.hotels section img {
+  width: 90%;
+  transition: 0.5s;
+}
+.hotels section img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.hotels section div {
+  align-self: center;
+  width: 90%;
+}
+.hotels section div h3 {
+  font-size: 2rem;
+  color: #02144d;
+}
+.hotels section div p {
+  line-height: 150%;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
+}
+.hotels section div a {
+  background-color: #83b1ee;
+  color: #02144d;
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.hotels section div a:hover {
+  background-color: #02144d;
+  color: #fff;
+  box-shadow: 2px 3px 10px rgba(9, 8, 8, 0.2);
+}
+
+.hotels-moving {
+  animation: hotels 1.5s ease-in forwards;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.box-animation {
+  width: 35%;
+  background-color: #83b1ee;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: box 1s ease-in-out 1s forwards;
+}
+
+/*# sourceMappingURL=style.css.map */
